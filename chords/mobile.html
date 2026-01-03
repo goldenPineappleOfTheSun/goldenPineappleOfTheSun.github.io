@@ -3,26 +3,66 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Simple Music API</title>
+	<title>Scale Keyboard</title>
+
 	<style>
 		body {
 			font-family: sans-serif;
 			text-align: center;
-			margin-top: 40px;
+			padding: 20px;
 		}
-		button {
+
+		select {
+			font-size: 16px;
+			padding: 6px;
+			margin-bottom: 20px;
+		}
+
+		.raised {
+			display: flex;
+			justify-content: center;
+			gap: 6px;
+			margin-bottom: 6px;
+			opacity: 0.5;
+		}
+
+		.raised button {
+			font-size: 12px;
+			padding: 4px 6px;
+		}
+
+		.keyboard {
+			display: flex;
+			justify-content: center;
+			gap: 8px;
+		}
+
+		.key {
+			width: 60px;
+			height: 80px;
+			border: 1px solid #333;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			font-size: 18px;
-			padding: 10px 20px;
+			background: #f2f2f2;
 		}
 	</style>
 </head>
 <body>
 
-	<h1>Music API Test</h1>
-	<p>If sound doesn't start automatically, tap the button.</p>
-	<button onclick="initAndPlay()">Start Audio</button>
+	<h2>Scale selector</h2>
+
+	<select id="scaleSelect"></select>
+
+	<div class="raised" id="raisedRow"></div>
+	<div class="keyboard" id="keyboard"></div>
 
 	<script>
+
+		// ------ sound --------
+
+		
 		let audioContext = null
 		let activeOscillators = []
 
@@ -94,6 +134,257 @@
 		window.addEventListener('touchstart', () => {
 			initAndPlay()
 		}, { once: true })
+
+		// ------ functional -------
+
+		// semitone steps for major & natural minor scales
+		const scaleIntervals = {
+			major: [0, 2, 4, 5, 7, 9, 11],
+			minor: [0, 2, 3, 5, 7, 8, 10]
+		}
+
+		// chord formulas (intervals from root)
+		const chordFormulas = {
+			maj:		[0, 4, 7],
+			min:		[0, 3, 7],
+			maj7:		[0, 4, 7, 11],
+			min7:		[0, 3, 7, 10],
+			sus4:		[0, 5, 7],
+			sus2:		[0, 2, 7],
+			'7sus4':	[0, 5, 7, 10],
+			'7sus2':	[0, 2, 7, 10],
+			aug:		[0, 4, 8],
+			dim:		[0, 3, 6],
+			power:		[0, 7]
+		}
+
+		function playChord(rootStep, chordType) {
+			const scaleValue = scaleSelect.value
+			const isMinor = scaleValue.includes('Minor')
+			const scaleType = isMinor ? 'minor' : 'major'
+
+			const scaleRootName = scaleValue.split(' ')[0]
+			const scaleRootIndex = notes.indexOf(scaleRootName)
+
+			if (scaleRootIndex === -1) return
+			if (!chordFormulas[chordType]) return
+
+			// rootStep: 1–11 (wrap through scale degrees)
+			const scaleDegreeIndex = (rootStep - 1) % 7
+			const octaveOffset = Math.floor((rootStep - 1) / 7) * 12
+
+			const rootSemitone =
+				scaleRootIndex +
+				scaleIntervals[scaleType][scaleDegreeIndex] +
+				octaveOffset
+
+			const chordNotes = chordFormulas[chordType].map(interval => {
+				const noteIndex = (rootSemitone + interval) % 12
+				return notes[noteIndex].toLowerCase()
+			})
+
+			playMusicNotes(chordNotes)
+		}
+
+		// ------- gestures -------
+
+		const chordStandards = {
+			maj: [
+				{x:  0, y: 0},
+				{x: 10, y: 0},
+				{x: 20, y: 0}
+			],
+			min: [
+				{x:  0, y: 0},
+				{x: 10, y: 15},
+				{x: 20, y: 0}
+			],
+			maj7: [
+				{x:  0, y: 0},
+				{x: 10, y: 0},
+				{x: 20, y: 15}
+			],
+			power: [
+				{x:  0, y: 0},
+				{x: 10, y: 0}
+			]
+		}
+
+		let activeTouches = []
+		let activeRootStep = null
+		let activeChordType = null
+
+		function normalize(points) {
+			const base = points[0]
+			return points.map(p => ({
+				x: p.x - base.x,
+				y: p.y - base.y
+			}))
+		}
+
+		function shapeDistance(a, b) {
+			if (a.length !== b.length) return Infinity
+
+			let sum = 0
+			for (let i = 0; i < a.length; i++) {
+				const dx = a[i].x - b[i].x
+				const dy = a[i].y - b[i].y
+				sum += Math.hypot(dx, dy)
+			}
+			return sum
+		}
+
+		function detectChord(points) {
+			if (points.length < 2 || points.length > 4) return null
+
+			const norm = normalize(points)
+			let best = null
+			let bestScore = Infinity
+
+			for (const type in chordStandards) {
+				const standard = normalize(chordStandards[type])
+				const score = shapeDistance(norm, standard)
+
+				if (score < bestScore) {
+					bestScore = score
+					best = type
+				}
+			}
+
+			return bestScore < 80 ? best : null
+		}
+
+		// ------- render -------
+
+		const scales = []
+
+		const notes = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
+
+		notes.forEach(n => {
+			scales.push(n + ' Major')
+			scales.push(n + ' Minor')
+		})
+
+		const majorRoman = ['I','ii','iii','IV','V','vi','vii°']
+		const minorRoman = ['i','ii°','III','iv','v','VI','VII']
+
+		const scaleSelect = document.getElementById('scaleSelect')
+		const keyboard = document.getElementById('keyboard')
+		const raisedRow = document.getElementById('raisedRow')
+
+		scales.forEach(scale => {
+			const option = document.createElement('option')
+			option.value = scale
+			option.textContent = scale
+			scaleSelect.appendChild(option)
+		})
+
+		function renderScale() {
+			keyboard.innerHTML = ''
+			raisedRow.innerHTML = ''
+
+			const isMinor = scaleSelect.value.includes('Minor')
+			const romans = isMinor ? minorRoman : majorRoman
+
+			// raised chords (visual only)
+			romans.forEach(r => {
+				const btn = document.createElement('button')
+				btn.textContent = r + '#'
+				btn.disabled = true
+				raisedRow.appendChild(btn)
+			})
+
+			const firstStandard = Object.keys(chordStandards)[0]
+
+			romans.forEach((r, index) => {
+				const key = document.createElement('div')
+				key.className = 'key'
+				key.textContent = r
+
+				// MULTITOUCH (mobile)
+				key.addEventListener('touchstart', e => {
+					if (e.touches.length < 2) return
+
+					e.preventDefault()
+
+					if (activeRootStep === null) {
+						activeRootStep = index + 1
+					}
+
+					activeTouches = []
+					for (const t of e.touches) {
+						activeTouches.push({
+							id: t.identifier,
+							x: t.clientX,
+							y: t.clientY
+						})
+					}
+				}, { passive: false })
+
+				// MOUSE (desktop fallback)
+				key.addEventListener('mousedown', e => {
+					e.preventDefault()
+
+					activeRootStep = index + 1
+					activeChordType = firstStandard
+
+					playChord(activeRootStep, activeChordType)
+				})
+
+				keyboard.appendChild(key)
+			})
+		}
+
+		scaleSelect.addEventListener('change', renderScale)
+
+		renderScale()
+
+		// ------ touches -----
+
+		function updateGesture() {
+			const chord = detectChord(activeTouches)
+
+			if (!chord || !activeRootStep) {
+				stopNotes()
+				return
+			}
+
+			if (chord !== activeChordType) {
+				activeChordType = chord
+				playChord(activeRootStep, chord)
+			}
+		}
+
+		window.addEventListener('touchstart', e => {
+			for (const t of e.changedTouches) {
+				activeTouches.push({ id: t.identifier, x: t.clientX, y: t.clientY })
+			}
+			updateGesture()
+		})
+
+		window.addEventListener('touchmove', e => {
+			for (const t of e.changedTouches) {
+				const touch = activeTouches.find(p => p.id === t.identifier)
+				if (touch) {
+					touch.x = t.clientX
+					touch.y = t.clientY
+				}
+			}
+			updateGesture()
+		})
+
+		window.addEventListener('touchend', e => {
+			for (const t of e.changedTouches) {
+				activeTouches = activeTouches.filter(p => p.id !== t.identifier)
+			}
+
+			if (activeTouches.length === 0) {
+				activeRootStep = null
+				activeChordType = null
+				stopNotes()
+			}
+		})
+
 	</script>
 
 </body>
