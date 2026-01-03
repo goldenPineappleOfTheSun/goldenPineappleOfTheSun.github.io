@@ -175,7 +175,7 @@
 			power:[0,7]
 		}
 
-		function playChord(step, type) {
+		function playChord(step, raised, type) {
 			const isMinor = scaleSelect.value.includes('Minor')
 			const scaleType = isMinor ? 'minor' : 'major'
 
@@ -189,7 +189,7 @@
 			const rootSemitone =
 				rootIndex +
 				scaleIntervals[scaleType][degree] +
-				octave
+				octave + (raised ? 1 : 0)
 
 			const chordNotes = chordFormulas[type].map(i =>
 				notes[(rootSemitone + i) % 12]
@@ -256,7 +256,7 @@
 					const b = document.createElement('div')
 					b.className = 'button' + (row.raised ? ' small' : '')
 					b.textContent = row.raised ? r+'#' : r
-					b.onclick = () => playChord(i+1, row.type)
+					b.onclick = () => playChord(i+1, row.raised, row.type)
 					b.classList.add(styles[row.type])
 					buttonGrid.appendChild(b)
 				})
@@ -265,6 +265,19 @@
 
 		scaleSelect.onchange = renderGrid
 		renderGrid()
+
+		// stop sound when touching outside controls
+		document.addEventListener('touchstart', e => {
+			if (!e.target.closest('button, .button, select, input')) {
+				stopNotes()
+			}
+		})
+
+		document.addEventListener('mousedown', e => {
+			if (!e.target.closest('button, .button, select, input')) {
+				stopNotes()
+			}
+		})
 	</script>
 
 </body>
