@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Music API</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			text-align: center;
+			margin-top: 40px;
+		}
+		button {
+			font-size: 18px;
+			padding: 10px 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Music API Test</h1>
+	<p>If sound doesn't start automatically, tap the button.</p>
+	<button onclick="initAndPlay()">Start Audio</button>
+
+	<script>
+		let audioContext = null
+		let activeOscillators = []
+
+		const noteFrequencies = {
+			'c': 261.63,
+			'c#': 277.18,
+			'd': 293.66,
+			'd#': 311.13,
+			'e': 329.63,
+			'f': 349.23,
+			'f#': 369.99,
+			'g': 392.00,
+			'g#': 415.30,
+			'a': 440.00,
+			'a#': 466.16,
+			'b': 493.88
+		}
+
+		function ensureAudioContext() {
+			if (!audioContext) {
+				audioContext = new (window.AudioContext || window.webkitAudioContext)()
+			}
+			if (audioContext.state === 'suspended') {
+				audioContext.resume()
+			}
+		}
+
+		function playMusicNotes(notes) {
+			ensureAudioContext()
+			stopNotes()
+
+			notes.forEach(note => {
+				const freq = noteFrequencies[note.toLowerCase()]
+				if (!freq) return
+
+				const osc = audioContext.createOscillator()
+				const gain = audioContext.createGain()
+
+				osc.type = 'sine'
+				osc.frequency.value = freq
+
+				gain.gain.value = 0.15
+
+				osc.connect(gain)
+				gain.connect(audioContext.destination)
+
+				osc.start()
+				activeOscillators.push(osc)
+			})
+		}
+
+		function stopNotes() {
+			activeOscillators.forEach(osc => {
+				try { osc.stop() } catch (e) {}
+			})
+			activeOscillators = []
+		}
+
+		function initAndPlay() {
+			playMusicNotes(['c', 'e', 'g', 'b'])
+		}
+
+		// Attempt autoplay on load (will succeed on desktop, may fail on mobile)
+		window.addEventListener('load', () => {
+			initAndPlay()
+		})
+
+		// Fallback: first user interaction unlocks audio on mobile
+		window.addEventListener('touchstart', () => {
+			initAndPlay()
+		}, { once: true })
+	</script>
+
+</body>
+</html>
