@@ -1,0 +1,2446 @@
+{
+  "camera": {
+    "position": {
+      "x": 2.8595077498871597,
+      "y": 0.16322621194832226,
+      "z": 6.038968334898692
+    },
+    "rotation": {
+      "x": -0.21579632679489602,
+      "y": -6.074999999999992,
+      "z": 0
+    }
+  },
+  "planes": [
+    {
+      "position": {
+        "x": 0,
+        "y": 1.12,
+        "z": 2
+      },
+      "rotation": {
+        "x": -0.1299999999999998,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 2.5937424601000023,
+        "y": 2.5937424601000023,
+        "z": 2.5937424601000023
+      },
+      "textureUrl": "https://png.pngtree.com/png-clipart/20230807/original/pngtree-electric-pylon-or-electric-tower-concept-vector-row-illustration-industry-vector-picture-image_10108488.png"
+    },
+    {
+      "position": {
+        "x": 0.018151325729873824,
+        "y": 1.12,
+        "z": 1.6781435645982594
+      },
+      "rotation": {
+        "x": 0.14000000000000012,
+        "y": 0,
+        "z": 0
+      },
+      "scale": {
+        "x": 2.5937424601000023,
+        "y": 2.5937424601000023,
+        "z": 2.5937424601000023
+      },
+      "textureUrl": "https://png.pngtree.com/png-clipart/20230807/original/pngtree-electric-pylon-or-electric-tower-concept-vector-row-illustration-industry-vector-picture-image_10108488.png"
+    },
+    {
+      "position": {
+        "x": 0.08928362611913393,
+        "y": 1.1900000000000002,
+        "z": 1.8262632367020264
+      },
+      "rotation": {
+        "x": -3.111592653589796,
+        "y": -1.5415926535897648,
+        "z": 3.1415926535897896
+      },
+      "scale": {
+        "x": 2.5937424601000023,
+        "y": 2.5937424601000023,
+        "z": 2.5937424601000023
+      },
+      "textureUrl": "https://png.pngtree.com/png-clipart/20230807/original/pngtree-electric-pylon-or-electric-tower-concept-vector-row-illustration-industry-vector-picture-image_10108488.png"
+    },
+    {
+      "position": {
+        "x": -0.19282519811349075,
+        "y": 0.4492253446202622,
+        "z": 2.3366384514620897
+      },
+      "rotation": {
+        "x": -0.0015092802810311137,
+        "y": 1.0149994895129746,
+        "z": 0.0012821041103987297
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://static.vecteezy.com/system/resources/previews/065/845/571/non_2x/autumn-birch-tree-with-yellow-leaves-on-transparent-background-png.png"
+    },
+    {
+      "position": {
+        "x": -0.21158361692994132,
+        "y": 0.014976789257534479,
+        "z": 2.470076540417505
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0.020000000000000143,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 2.345734188103684,
+        "y": 2.345734188103684,
+        "z": 2.345734188103684
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -0.21535599020172097,
+        "y": 0.004976789257534479,
+        "z": 0.15856701791359717
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 2.345734188103684,
+        "y": 2.345734188103684,
+        "z": 2.345734188103684
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -0.24036279898176804,
+        "y": -0.0050232107424655215,
+        "z": -2.1863487770254313
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 2.345734188103684,
+        "y": 2.345734188103684,
+        "z": 2.345734188103684
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -1.0174622273618952,
+        "y": 0.2326272816679452,
+        "z": -1.3484805540171971
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.2132032361047167,
+        "y": 0.19262728166794515,
+        "z": 1.5330110584169598
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.2918797355835694,
+        "y": 0.9059870120612086,
+        "z": 0.16490172614943868
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.3830694606162832,
+        "y": 0.8859870120612086,
+        "z": 1.4956669120031925
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.007960447167901855,
+        "y": 0.369225344620262,
+        "z": 1.4154667553394924
+      },
+      "rotation": {
+        "x": -0.00035569974283021944,
+        "y": -0.0950001203090607,
+        "z": 0.0006795281788714698
+      },
+      "scale": {
+        "x": 0.7625989210148106,
+        "y": 0.7625989210148106,
+        "z": 0.7625989210148106
+      },
+      "textureUrl": "https://static.vecteezy.com/system/resources/previews/065/845/571/non_2x/autumn-birch-tree-with-yellow-leaves-on-transparent-background-png.png"
+    },
+    {
+      "position": {
+        "x": -0.0729105869727005,
+        "y": 0.369225344620262,
+        "z": 1.818464256831016
+      },
+      "rotation": {
+        "x": 3.1405339226523346,
+        "y": -0.756592295493033,
+        "z": 3.1406623960556703
+      },
+      "scale": {
+        "x": 0.7625989210148106,
+        "y": 0.7625989210148106,
+        "z": 0.7625989210148106
+      },
+      "textureUrl": "https://static.vecteezy.com/system/resources/previews/065/845/571/non_2x/autumn-birch-tree-with-yellow-leaves-on-transparent-background-png.png"
+    },
+    {
+      "position": {
+        "x": 0.25281311277581514,
+        "y": 0.369225344620262,
+        "z": 1.8165194503408009
+      },
+      "rotation": {
+        "x": 3.1410587475534766,
+        "y": -0.16659247300564875,
+        "z": 3.1409066927234868
+      },
+      "scale": {
+        "x": 1.6346985136054228,
+        "y": 1.6346985136054228,
+        "z": 1.6346985136054228
+      },
+      "textureUrl": "https://static.vecteezy.com/system/resources/previews/065/845/571/non_2x/autumn-birch-tree-with-yellow-leaves-on-transparent-background-png.png"
+    },
+    {
+      "position": {
+        "x": -1.117999457044077,
+        "y": 0.2026272816679452,
+        "z": 0.177786256594096
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.1932950460831937,
+        "y": 0.9359870120612086,
+        "z": -1.3312777757783874
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.9105601805459304,
+        "y": 0.2326272816679452,
+        "z": -2.864462971961417
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.0780932629843303,
+        "y": 0.9559870120612086,
+        "z": -2.858217458986163
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.8212471279624763,
+        "y": 0.2526272816679452,
+        "z": -4.381135304575135
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.9899463389592831,
+        "y": 0.9859870120612086,
+        "z": -4.369773412954516
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.229203694719689,
+        "y": -0.003563878642444066,
+        "z": -5.309070636404668
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 2.345734188103684,
+        "y": 2.345734188103684,
+        "z": 2.345734188103684
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -1.6522332876210788,
+        "y": 0.9859870120612086,
+        "z": -5.1045834725513295
+      },
+      "rotation": {
+        "x": -3.1251094255172287,
+        "y": 0.04178559600752866,
+        "z": -3.118163141194142
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.8480490477673965,
+        "y": 1.0859870120612087,
+        "z": -7.8888225910566225
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.6351413254609214,
+        "y": 0.2526272816679452,
+        "z": -7.867377784481206
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.20565395130944086,
+        "y": -0.003563878642444066,
+        "z": -8.43793492781205
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 2.345734188103684,
+        "y": 2.345734188103684,
+        "z": 2.345734188103684
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -0.538940608912865,
+        "y": 0.2826272816679452,
+        "z": -9.366738189043463
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.45263221537912135,
+        "y": 0.3026272816679452,
+        "z": -10.889893840920635
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.33258068033238497,
+        "y": 0.32262728166794524,
+        "z": -12.343557534241317
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.23252914528564864,
+        "y": 0.34262728166794526,
+        "z": -13.797221227561998
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.7683144208899171,
+        "y": 1.1059870120612088,
+        "z": -9.29570707157721
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.6515388976162784,
+        "y": 1.1259870120612088,
+        "z": -10.825175282105189
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.5530350347142179,
+        "y": 1.1259870120612088,
+        "z": -12.335695348932914
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.4285916555841839,
+        "y": 1.1259870120612088,
+        "z": -13.820126331902188
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.6737294247190184,
+        "y": 1.0859870120612087,
+        "z": -7.175103539379044
+      },
+      "rotation": {
+        "x": -3.1251094255172287,
+        "y": 0.04178559600752866,
+        "z": -3.118163141194142
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.434755077038472,
+        "y": 0.18598701206120855,
+        "z": -7.23326040839816
+      },
+      "rotation": {
+        "x": -3.1251094255172287,
+        "y": 0.04178559600752866,
+        "z": -3.118163141194142
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.5704273124302843,
+        "y": 0.18598701206120855,
+        "z": -5.115116782600059
+      },
+      "rotation": {
+        "x": -3.1251094255172287,
+        "y": 0.04178559600752866,
+        "z": -3.118163141194142
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -3.7323400400864304,
+        "y": 1.1766092215307238,
+        "z": -1.451621648520249
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -6.58720560066951,
+        "y": 1.1766092215307238,
+        "z": -1.5885252104704457
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -2.9396258815173675,
+        "y": 0.4866092215307233,
+        "z": -10.993701408931042
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -3.102046162365234,
+        "y": 1.5966092215307237,
+        "z": -10.978877607391661
+      },
+      "rotation": {
+        "x": -1.5580879375456023,
+        "y": 0.0052047731733567675,
+        "z": 1.5047832378373514
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": 1.9529518553401564,
+        "y": 0.5119701986686676,
+        "z": 4.608304879647006
+      },
+      "rotation": {
+        "x": 0.010613411567371554,
+        "y": 0.6619045114371706,
+        "z": 0.02145486536611067
+      },
+      "scale": {
+        "x": 1.3374806020408003,
+        "y": 1.3374806020408003,
+        "z": 1.3374806020408003
+      },
+      "textureUrl": "https://png.pngtree.com/png-vector/20250813/ourmid/pngtree-red-brick-arch-on-white-background-high-resolution-png-image_17134218.webp"
+    },
+    {
+      "position": {
+        "x": -0.1691012396843724,
+        "y": -0.0050232107424655215,
+        "z": 5.517135959081785
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 2.345734188103684,
+        "y": 2.345734188103684,
+        "z": 2.345734188103684
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": 4.238260663451075,
+        "y": -0.015023210742465522,
+        "z": 2.6507858027149127
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 6.692653400172007,
+        "y": 6.692653400172007,
+        "z": 6.692653400172007
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -2.793192836322661,
+        "y": 0.37598701206120877,
+        "z": 2.211050833096447
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -6.072541362270642,
+        "y": 0.4359870120612088,
+        "z": 2.1169285539430662
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.602582684744373,
+        "y": -0.04502321074246553,
+        "z": 4.86862423923307
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 6.692653400172007,
+        "y": 6.692653400172007,
+        "z": 6.692653400172007
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": 4.174085087795154,
+        "y": -0.025023210742465524,
+        "z": -5.773927619395985
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 6.692653400172007,
+        "y": 6.692653400172007,
+        "z": 6.692653400172007
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -1.9974358705809656,
+        "y": 0.6859870120612087,
+        "z": -14.618865800005372
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -2.5483526575510522,
+        "y": 1.5966092215307237,
+        "z": -20.428690468327897
+      },
+      "rotation": {
+        "x": -1.5580879375456023,
+        "y": 0.0052047731733567675,
+        "z": 1.5047832378373514
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -1.9237423657667736,
+        "y": 0.6859870120612087,
+        "z": -16.618678660941605
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.2444951459849588,
+        "y": 1.1259870120612088,
+        "z": -17.304331164798185
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.16215677633227352,
+        "y": 1.1259870120612088,
+        "z": -18.841212534376663
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.0698184066795882,
+        "y": 1.1359870120612088,
+        "z": -20.358093903955137
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": 0.022519962973097066,
+        "y": 1.1459870120612088,
+        "z": -21.834975273533605
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": 0.10485833262578224,
+        "y": 1.1859870120612088,
+        "z": -23.321856643112074
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.12575362201202755,
+        "y": 0.34262728166794526,
+        "z": -17.296689438089984
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -0.016143527566553968,
+        "y": 0.3626272816679453,
+        "z": -18.77889066984584
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": 0.06346656687891966,
+        "y": 0.3626272816679453,
+        "z": -20.261091901601695
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": 0.17008119664211563,
+        "y": 0.3626272816679453,
+        "z": -21.773004706064647
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": 0.25669582640531186,
+        "y": 0.3626272816679453,
+        "z": -23.274917510527597
+      },
+      "rotation": {
+        "x": 0.33541355402239026,
+        "y": 1.4960422894640755,
+        "z": -0.31878283312020683
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -2.3451395362551826,
+        "y": 0.9066092215307235,
+        "z": -20.532576262875548
+      },
+      "rotation": {
+        "x": -1.5580879375456023,
+        "y": 0.0052047731733567675,
+        "z": 1.5047832378373514
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": 1.6734528172009207,
+        "y": 0.004976789257534477,
+        "z": -16.32957399656684
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 11.856443750262125,
+        "y": 11.856443750262125,
+        "z": 11.856443750262125
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -1.374905857869065,
+        "y": 0.6859870120612087,
+        "z": -24.165168713063036
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -2.5527898924105465,
+        "y": 2.095987012061212,
+        "z": -3.543710726046619
+      },
+      "rotation": {
+        "x": 0.1932822623636968,
+        "y": 1.4377322965195458,
+        "z": -0.1773556923388221
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -2.8391388221596605,
+        "y": 2.035987012061213,
+        "z": -0.6913764091835113
+      },
+      "rotation": {
+        "x": 0.6640296437403266,
+        "y": 1.531952363323074,
+        "z": -0.6469304001188702
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.379185757405376,
+        "y": 2.035987012061213,
+        "z": 0.7060761139100289
+      },
+      "rotation": {
+        "x": 0.015816165860575934,
+        "y": -0.07018513440893863,
+        "z": -0.023466842375865875
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -2.296966073445456,
+        "y": 2.095987012061212,
+        "z": -9.115634924702505
+      },
+      "rotation": {
+        "x": 0.5359610892655201,
+        "y": 1.5235868309304046,
+        "z": -0.5189789344485755
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -2.0907653568974274,
+        "y": 2.275987012061209,
+        "z": -12.734995329264745
+      },
+      "rotation": {
+        "x": 0.38343670815693215,
+        "y": 1.5054633885919597,
+        "z": -0.36668880883236754
+      },
+      "scale": {
+        "x": 2.287914286629611,
+        "y": 2.287914286629611,
+        "z": 2.287914286629611
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.7420751581068228,
+        "y": 2.1559870120612112,
+        "z": -18.394496269083575
+      },
+      "rotation": {
+        "x": 0.38343670815693215,
+        "y": 1.5054633885919597,
+        "z": -0.36668880883236754
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.6103722954250894,
+        "y": 2.1559870120612112,
+        "z": -20.830694768298002
+      },
+      "rotation": {
+        "x": 0.38343670815693215,
+        "y": 1.5054633885919597,
+        "z": -0.36668880883236754
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -3.291141084233873,
+        "y": 2.1559870120612112,
+        "z": -22.6403662932809
+      },
+      "rotation": {
+        "x": -3.1251094255172274,
+        "y": 0.04178559600751154,
+        "z": -3.1181631411941475
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -3.563379480716539,
+        "y": 2.1559870120612112,
+        "z": -16.790061840775355
+      },
+      "rotation": {
+        "x": -3.1251094255172274,
+        "y": 0.04178559600751154,
+        "z": -3.1181631411941475
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -3.6657719360063195,
+        "y": 2.1559870120612112,
+        "z": -14.480295569241683
+      },
+      "rotation": {
+        "x": -3.1251094255172274,
+        "y": 0.04178559600751154,
+        "z": -3.1181631411941475
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.047822639265823,
+        "y": 2.1559870120612112,
+        "z": -7.357624139249397
+      },
+      "rotation": {
+        "x": -3.1251094255172274,
+        "y": 0.04178559600751154,
+        "z": -3.1181631411941475
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.137752733742676,
+        "y": 2.1559870120612112,
+        "z": -5.166747949366006
+      },
+      "rotation": {
+        "x": -3.1251094255172274,
+        "y": 0.04178559600751154,
+        "z": -3.1181631411941475
+      },
+      "scale": {
+        "x": 2.311024531949102,
+        "y": 2.311024531949102,
+        "z": 2.311024531949102
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.688953342923563,
+        "y": 3.046609221530722,
+        "z": -2.264911309766895
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 3.9725214450772826,
+        "y": 3.9725214450772826,
+        "z": 3.9725214450772826
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -4.522969210858683,
+        "y": 3.046609221530722,
+        "z": -11.023938422934352
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 4.806750948543513,
+        "y": 4.806750948543513,
+        "z": 4.806750948543513
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -3.5922868539265513,
+        "y": 3.046609221530722,
+        "z": -19.737393535000756
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 3.9725214450772826,
+        "y": 3.9725214450772826,
+        "z": 3.9725214450772826
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -4.3462384338843565,
+        "y": 4.925987012061212,
+        "z": -11.152533541870453
+      },
+      "rotation": {
+        "x": 0.05815786878604924,
+        "y": 1.4897785633211795,
+        "z": 1.5271450349533087
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.277441827019476,
+        "y": 8.585987012061214,
+        "z": -11.078405797564526
+      },
+      "rotation": {
+        "x": 0.05815786878604924,
+        "y": 1.4897785633211795,
+        "z": 1.5271450349533087
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -4.280690853588537,
+        "y": 12.395987012061209,
+        "z": -11.030835708890201
+      },
+      "rotation": {
+        "x": 0.05815786878604924,
+        "y": 1.4897785633211795,
+        "z": 1.5271450349533087
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -1.774064357094111,
+        "y": 0.6771169290766441,
+        "z": -6.141855060119603
+      },
+      "rotation": {
+        "x": -1.5042037733271725,
+        "y": 0.6186414223288788,
+        "z": 1.4916952017910856
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -5.295996878715737,
+        "y": 12.395987012061209,
+        "z": -12.242871614078012
+      },
+      "rotation": {
+        "x": -3.1380430743766006,
+        "y": 0.031905902989285,
+        "z": -1.5868892499919296
+      },
+      "scale": {
+        "x": 2.5167057152925723,
+        "y": 2.5167057152925723,
+        "z": 2.5167057152925723
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -5.268512909314598,
+        "y": 8.515987012061212,
+        "z": -12.260948195278255
+      },
+      "rotation": {
+        "x": -3.1380430743766006,
+        "y": 0.031905902989285,
+        "z": -1.5868892499919296
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -5.20183588068623,
+        "y": 4.675987012061211,
+        "z": -12.290623613615944
+      },
+      "rotation": {
+        "x": -3.1380430743766006,
+        "y": 0.031905902989285,
+        "z": -1.5868892499919296
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -5.437700377871736,
+        "y": 12.065987012061216,
+        "z": -9.969883714155841
+      },
+      "rotation": {
+        "x": -3.1380430743766006,
+        "y": 0.031905902989285,
+        "z": -1.5868892499919296
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -5.416108886867412,
+        "y": 8.305987012061223,
+        "z": -10.044011227618824
+      },
+      "rotation": {
+        "x": -3.1380430743766006,
+        "y": 0.031905902989285,
+        "z": -1.5868892499919296
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -5.41451739586308,
+        "y": 5.085987012061232,
+        "z": -10.058138741081802
+      },
+      "rotation": {
+        "x": -3.1380430743766006,
+        "y": 0.031905902989285,
+        "z": -1.5868892499919296
+      },
+      "scale": {
+        "x": 2.5421269851440123,
+        "y": 2.5421269851440123,
+        "z": 2.5421269851440123
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": 1.865252653598394,
+        "y": 0.07507996639204824,
+        "z": 4.333504641395187
+      },
+      "rotation": {
+        "x": -0.027806013123687565,
+        "y": 0.5852797954840028,
+        "z": -0.024138320566007038
+      },
+      "scale": {
+        "x": 0.1797983636222754,
+        "y": 0.1797983636222754,
+        "z": 0.1797983636222754
+      },
+      "textureUrl": "https://static.wikia.nocookie.net/vsbattles/images/5/58/Quakeguy.png/revision/latest?cb=20200501095553"
+    },
+    {
+      "position": {
+        "x": -0.7184476537041489,
+        "y": 0.13507996639204825,
+        "z": -5.811980023012464
+      },
+      "rotation": {
+        "x": -0.027806013123687565,
+        "y": 0.5852797954840028,
+        "z": -0.024138320566007038
+      },
+      "scale": {
+        "x": 0.1797983636222754,
+        "y": 0.1797983636222754,
+        "z": 0.1797983636222754
+      },
+      "textureUrl": "https://static.wikia.nocookie.net/vsbattles/images/5/58/Quakeguy.png/revision/latest?cb=20200501095553"
+    },
+    {
+      "position": {
+        "x": -4.193239102336751,
+        "y": 2.3771169290766427,
+        "z": -6.234838076441958
+      },
+      "rotation": {
+        "x": -1.5042037733271725,
+        "y": 0.6186414223288788,
+        "z": 1.4916952017910856
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -7.559220587299256,
+        "y": 2.035987012061213,
+        "z": 0.6262980740221494
+      },
+      "rotation": {
+        "x": 0.017925552651470528,
+        "y": 0.01979017508103228,
+        "z": -0.023413642923811963
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -9.019987374200445,
+        "y": 2.1459870120612106,
+        "z": -0.8286198695305789
+      },
+      "rotation": {
+        "x": 0.20763533259589914,
+        "y": 1.4475628779719114,
+        "z": -0.19159124594455895
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -8.933474639051598,
+        "y": 2.3559870120612065,
+        "z": -3.5623304534537055
+      },
+      "rotation": {
+        "x": 2.2701486409335705,
+        "y": 1.5406485179165341,
+        "z": -2.2524641084062877
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -7.35270785215041,
+        "y": 2.3259870120612107,
+        "z": -5.2274125099009625
+      },
+      "rotation": {
+        "x": 0.017925552651470528,
+        "y": 0.01979017508103228,
+        "z": -0.023413642923811963
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -7.270070545506125,
+        "y": 3.046609221530722,
+        "z": -2.296660566885658
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 3.9725214450772826,
+        "y": 3.9725214450772826,
+        "z": 3.9725214450772826
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -11.287306900745504,
+        "y": -0.04502321074246553,
+        "z": 5.1398462168575385
+      },
+      "rotation": {
+        "x": -1.5707963267948966,
+        "y": 0,
+        "z": 1.5707963267948966
+      },
+      "scale": {
+        "x": 6.692653400172007,
+        "y": 6.692653400172007,
+        "z": 6.692653400172007
+      },
+      "textureUrl": "https://thumbs.dreamstime.com/b/soil-dried-grass-background-seamless-texture-ground-dry-herbs-114164890.jpg"
+    },
+    {
+      "position": {
+        "x": -7.727265578271768,
+        "y": 0.4359870120612088,
+        "z": 2.038150531567533
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -10.227924017122819,
+        "y": 0.6771169290766441,
+        "z": 0.9494656606468204
+      },
+      "rotation": {
+        "x": -0.9575323684085243,
+        "y": -0.02530803376887432,
+        "z": -0.016290894259812255
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -13.732562661949117,
+        "y": 1.1766092215307238,
+        "z": -1.7767978412445435
+      },
+      "rotation": {
+        "x": -1.5287927002360426,
+        "y": -0.0059543856048900855,
+        "z": 1.5847520453641877
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -10.082766321085709,
+        "y": 2.467116929076645,
+        "z": -1.6622875793837333
+      },
+      "rotation": {
+        "x": -0.9575323684085243,
+        "y": -0.02530803376887432,
+        "z": -0.016290894259812255
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -5.21416646932004,
+        "y": 1.1766092215307238,
+        "z": -2.2545618875639812
+      },
+      "rotation": {
+        "x": -1.5387919120621019,
+        "y": -0.006093638272551687,
+        "z": 1.5046918098550666
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -18.124602260728587,
+        "y": 1.1766092215307238,
+        "z": -1.8256658434970974
+      },
+      "rotation": {
+        "x": -1.5187935050273065,
+        "y": -0.005814537612546525,
+        "z": 1.5348108853953206
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -12.88930517705123,
+        "y": 0.4359870120612088,
+        "z": 1.9892825293149816
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -16.141344775830657,
+        "y": 0.4359870120612088,
+        "z": 1.8804145270624324
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -19.354580777107053,
+        "y": 0.4359870120612088,
+        "z": 1.7649979570725334
+      },
+      "rotation": {
+        "x": 0.01675493122570225,
+        "y": -0.03019612272087062,
+        "z": -0.023419735512486665
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -3.5373983330584235,
+        "y": 0.5066092215307231,
+        "z": -1.6196119158928535
+      },
+      "rotation": {
+        "x": -1.5387919120621034,
+        "y": -0.006093638272553519,
+        "z": 1.5046918098550668
+      },
+      "scale": {
+        "x": 4.953886326321588,
+        "y": 4.953886326321588,
+        "z": 4.953886326321588
+      },
+      "textureUrl": "https://hips.hearstapps.com/hmg-prod/images/concrete-wall-royalty-free-image-1572896179.jpg"
+    },
+    {
+      "position": {
+        "x": -11.38833156461038,
+        "y": 0.4359870120612088,
+        "z": 0.4886263628631553
+      },
+      "rotation": {
+        "x": 2.713717726656805,
+        "y": 1.5164964738324909,
+        "z": -2.6956819341600506
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -5.03591262280576,
+        "y": 16.241919728530423,
+        "z": -10.74804890504698
+      },
+      "rotation": {
+        "x": 0.1955288679134879,
+        "y": 0.8678973581063859,
+        "z": -0.1359068374416101
+      },
+      "scale": {
+        "x": 5.874917825997624,
+        "y": 5.874917825997624,
+        "z": 5.874917825997624
+      },
+      "textureUrl": "https://png.pngtree.com/png-clipart/20240511/original/pngtree-industrial-industrial-chimney-flue-pipes-with-toxic-air-isolated-png-image_15065960.png"
+    },
+    {
+      "position": {
+        "x": -1.2545210643439855,
+        "y": 0.8071169290766436,
+        "z": -15.648410072006753
+      },
+      "rotation": {
+        "x": -1.5042037733271725,
+        "y": 0.6186414223288788,
+        "z": 1.4916952017910856
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -3.6122208520915478,
+        "y": 2.3771169290766427,
+        "z": -15.631026949915434
+      },
+      "rotation": {
+        "x": -1.5042037733271725,
+        "y": 0.6186414223288788,
+        "z": 1.4916952017910856
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -13.52494968961693,
+        "y": 2.035987012061213,
+        "z": -0.39965085379322873
+      },
+      "rotation": {
+        "x": 0.017925552651470528,
+        "y": 0.01979017508103228,
+        "z": -0.023413642923811963
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -16.7706787919346,
+        "y": 2.075987012061212,
+        "z": -0.40559978160860655
+      },
+      "rotation": {
+        "x": 0.017925552651470528,
+        "y": 0.01979017508103228,
+        "z": -0.023413642923811963
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -13.465282837084143,
+        "y": 3.8559870120612083,
+        "z": -0.41840488929458874
+      },
+      "rotation": {
+        "x": 0.017925552651470528,
+        "y": 0.01979017508103228,
+        "z": -0.023413642923811963
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -16.605615984551374,
+        "y": 3.925987012061207,
+        "z": -0.4471589247959479
+      },
+      "rotation": {
+        "x": 0.017925552651470528,
+        "y": 0.01979017508103228,
+        "z": -0.023413642923811963
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -11.958531863653208,
+        "y": 1.9759870120612113,
+        "z": -2.050834800620256
+      },
+      "rotation": {
+        "x": 2.2701486409335834,
+        "y": 1.5406485179165672,
+        "z": -2.2524641084063006
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -11.92420409904501,
+        "y": 3.8959870120612075,
+        "z": -2.0626911748221475
+      },
+      "rotation": {
+        "x": 2.2701486409335834,
+        "y": 1.5406485179165672,
+        "z": -2.2524641084063006
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -12.092816862494677,
+        "y": 3.955987012061206,
+        "z": -5.33960019343417
+      },
+      "rotation": {
+        "x": 2.2701486409335834,
+        "y": 1.5406485179165672,
+        "z": -2.2524641084063006
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -12.121429625944346,
+        "y": 1.9659870120612097,
+        "z": -5.366509212046209
+      },
+      "rotation": {
+        "x": 2.2701486409335834,
+        "y": 1.5406485179165672,
+        "z": -2.2524641084063006
+      },
+      "scale": {
+        "x": 2.1009313926810016,
+        "y": 2.1009313926810016,
+        "z": 2.1009313926810016
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -6.866464053537729,
+        "y": 4.227116929076634,
+        "z": -6.394115503861066
+      },
+      "rotation": {
+        "x": -1.5042037733271725,
+        "y": 0.6186414223288788,
+        "z": 1.4916952017910856
+      },
+      "scale": {
+        "x": 3.4522712143931042,
+        "y": 3.4522712143931042,
+        "z": 3.4522712143931042
+      },
+      "textureUrl": "https://c8.alamy.com/comp/2CBB7AJ/close-view-of-concrete-and-brick-steps-in-lepe-beach-2CBB7AJ.jpg"
+    },
+    {
+      "position": {
+        "x": -11.083780598301097,
+        "y": 7.845987012061201,
+        "z": -8.058915389204266
+      },
+      "rotation": {
+        "x": -0.7348341868533053,
+        "y": -0.03432649156969751,
+        "z": 1.5466398339874847
+      },
+      "scale": {
+        "x": 5.816168647737648,
+        "y": 5.816168647737648,
+        "z": 5.816168647737648
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -8.258720534280359,
+        "y": 7.105987012061208,
+        "z": -9.134949525553552
+      },
+      "rotation": {
+        "x": 2.2436059906629127,
+        "y": 1.4239451676580428,
+        "z": -1.4050627850232489
+      },
+      "scale": {
+        "x": 3.06004097749912,
+        "y": 3.06004097749912,
+        "z": 3.06004097749912
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -8.36293163528701,
+        "y": 3.9759870120612124,
+        "z": -6.3347430602631345
+      },
+      "rotation": {
+        "x": 2.2436059906629238,
+        "y": 1.4239451676580503,
+        "z": -1.4050627850232618
+      },
+      "scale": {
+        "x": 3.06004097749912,
+        "y": 3.06004097749912,
+        "z": 3.06004097749912
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -8.409151331049559,
+        "y": 9.69598701206118,
+        "z": -13.041014678614676
+      },
+      "rotation": {
+        "x": 2.1871086928868775,
+        "y": 1.4298090790986264,
+        "z": -2.169149038763452
+      },
+      "scale": {
+        "x": 3.06004097749912,
+        "y": 3.06004097749912,
+        "z": 3.06004097749912
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -8.369151331049558,
+        "y": 8.64598701206119,
+        "z": -10.501014678614693
+      },
+      "rotation": {
+        "x": 2.2436059906629127,
+        "y": 1.4239451676580428,
+        "z": -1.4050627850232489
+      },
+      "scale": {
+        "x": 3.06004097749912,
+        "y": 3.06004097749912,
+        "z": 3.06004097749912
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -9.641954010290592,
+        "y": 5.775987012061189,
+        "z": -12.686894293144753
+      },
+      "rotation": {
+        "x": 2.5243868730164367,
+        "y": 1.5091563893379496,
+        "z": -0.9401890950708357
+      },
+      "scale": {
+        "x": 5.313170373981951,
+        "y": 5.313170373981951,
+        "z": 5.313170373981951
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -9.69927414865704,
+        "y": 3.5259870120612002,
+        "z": -10.103135267820237
+      },
+      "rotation": {
+        "x": 2.5243868730164367,
+        "y": 1.5091563893379496,
+        "z": -0.9401890950708357
+      },
+      "scale": {
+        "x": 5.313170373981951,
+        "y": 5.313170373981951,
+        "z": 5.313170373981951
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -8.692243306190864,
+        "y": 8.345987012061196,
+        "z": -15.652031183691857
+      },
+      "rotation": {
+        "x": 2.2436059906629002,
+        "y": 1.4239451676580306,
+        "z": -3.025062785023241
+      },
+      "scale": {
+        "x": 3.06004097749912,
+        "y": 3.06004097749912,
+        "z": 3.06004097749912
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -9.33470599394442,
+        "y": 5.115987012061192,
+        "z": -18.90294528901721
+      },
+      "rotation": {
+        "x": 2.2436059906629002,
+        "y": 1.4239451676580306,
+        "z": -3.025062785023241
+      },
+      "scale": {
+        "x": 3.06004097749912,
+        "y": 3.06004097749912,
+        "z": 3.06004097749912
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -9.839665465003069,
+        "y": 3.705987012061197,
+        "z": -16.984720578472462
+      },
+      "rotation": {
+        "x": 2.5243868730164367,
+        "y": 1.5091563893379496,
+        "z": -0.9401890950708357
+      },
+      "scale": {
+        "x": 4.30366800292538,
+        "y": 4.30366800292538,
+        "z": 4.30366800292538
+      },
+      "textureUrl": "https://www.shutterstock.com/image-photo/wall-old-factory-building-red-260nw-460086337.jpg"
+    },
+    {
+      "position": {
+        "x": -13.368901609183395,
+        "y": 7.661919728530425,
+        "z": -2.1421848076931664
+      },
+      "rotation": {
+        "x": 0.5674437286988719,
+        "y": 1.3811807877471374,
+        "z": -0.4832782586686642
+      },
+      "scale": {
+        "x": 5.874917825997624,
+        "y": 5.874917825997624,
+        "z": 5.874917825997624
+      },
+      "textureUrl": "https://png.pngtree.com/png-clipart/20240511/original/pngtree-industrial-industrial-chimney-flue-pipes-with-toxic-air-isolated-png-image_15065960.png"
+    },
+    {
+      "position": {
+        "x": 2.18963659294001,
+        "y": 0.5119701986686676,
+        "z": 4.876160640534982
+      },
+      "rotation": {
+        "x": 0.010613411567371554,
+        "y": 0.6619045114371706,
+        "z": 0.02145486536611067
+      },
+      "scale": {
+        "x": 1.3374806020408003,
+        "y": 1.3374806020408003,
+        "z": 1.3374806020408003
+      },
+      "textureUrl": "https://png.pngtree.com/png-vector/20250813/ourmid/pngtree-red-brick-arch-on-white-background-high-resolution-png-image_17134218.webp"
+    },
+    {
+      "position": {
+        "x": 2.4049569254392726,
+        "y": 0.5119701986686676,
+        "z": 5.131300733622862
+      },
+      "rotation": {
+        "x": 0.010613411567371554,
+        "y": 0.6619045114371706,
+        "z": 0.02145486536611067
+      },
+      "scale": {
+        "x": 1.3374806020408003,
+        "y": 1.3374806020408003,
+        "z": 1.3374806020408003
+      },
+      "textureUrl": "https://png.pngtree.com/png-vector/20250813/ourmid/pngtree-red-brick-arch-on-white-background-high-resolution-png-image_17134218.webp"
+    },
+    {
+      "position": {
+        "x": 2.0724939980522716,
+        "y": 0.3040240164900854,
+        "z": 4.995911889504632
+      },
+      "rotation": {
+        "x": -3.133295101867841,
+        "y": 0.8503605563681882,
+        "z": 3.1125453726717587
+      },
+      "scale": {
+        "x": 0.6366131739000004,
+        "y": 0.6366131739000004,
+        "z": 0.6366131739000004
+      },
+      "textureUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Background_brick_wall.jpg"
+    },
+    {
+      "position": {
+        "x": 2.3283283037838243,
+        "y": 0.2940240164900854,
+        "z": 4.759578806331857
+      },
+      "rotation": {
+        "x": -3.133295101867841,
+        "y": 0.8503605563681882,
+        "z": 3.1125453726717587
+      },
+      "scale": {
+        "x": 0.6366131739000004,
+        "y": 0.6366131739000004,
+        "z": 0.6366131739000004
+      },
+      "textureUrl": "https://upload.wikimedia.org/wikipedia/commons/1/14/Background_brick_wall.jpg"
+    }
+  ]
+}

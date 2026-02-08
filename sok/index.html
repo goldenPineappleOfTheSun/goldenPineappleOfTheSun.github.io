@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Редактор</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        
+        #canvas-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        #controls {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        button:hover {
+            background: #45a049;
+        }
+        
+        #info {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div id="controls">
+        <button id="addPlane">Добавить плоскость</button>
+        <button id="modeToggle">Режим: Поворот</button>
+        <button id="saveScene">Сохранить сцену</button>
+        <button id="loadScene">Загрузить сцену</button>
+        <input type="file" id="loadFile" accept=".json" style="display: none;">
+    </div>
+    
+        <div id="info">
+        <div>WASD - движение камеры | Q/E - вверх/вниз | ПКМ+движение - поворот камеры</div>
+        <div>Режим поворота: Shift/Ctrl/Alt+ЛКМ+drag - вращение по осям</div>
+        <div>Режим перемещения: Shift/Ctrl/Alt+ЛКМ+drag - перемещение в координатах камеры</div>
+        <div>Стрелки ←→ - ось X | Стрелки ↑↓ - ось Z | Shift+Колесо - масштаб | Enter - загрузить текстуру | C - копировать | Del - удалить</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Инициализация сцены
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x2a2a2a, 1);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Параметры камеры
+        camera.position.set(0, 0, 5);
+        const cameraSpeed = 0.1;
+        const cameraRotationSpeed = 0.01;
+
+        // Состояние
+        let selectedPlane = null;
+        let planes = [];
+        let isRotating = false;
+        let isTranslating = false;
+        let lastMouseX = 0;
+        let lastMouseY = 0;
+        let editMode = 'rotation'; // 'rotation' или 'translation'
+
+        // Освещение
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        // Сетка на нулевой координате (земля)
+        const gridSize = 200; // Размер сетки в единицах
+        const gridDivisions = 200; // Количество делений
+        const gridHelper = new THREE.GridHelper(gridSize, gridDivisions, 0x888888, 0x444444);
+        gridHelper.position.y = 0; // Устанавливаем на нулевую координату Y
+        scene.add(gridHelper);
+
+        // Создание плоскости
+        function createPlane(textureUrl = null) {
+            const geometry = new THREE.PlaneGeometry(1, 1);
+            
+            let material;
+            if (textureUrl) {
+                const texture = new THREE.TextureLoader().load(textureUrl);
+                texture.alphaTest = 0.1;
+                material = new THREE.MeshStandardMaterial({
+                    map: texture,
+                    side: THREE.DoubleSide,
+                    transparent: true,
+                    alphaTest: 0.1
+                });
+            } else {
+                // Одноцветный прямоугольник по умолчанию
+                material = new THREE.MeshStandardMaterial({
+                    color: 0x4CAF50,
+                    side: THREE.DoubleSide
+                });
+            }
+
+            const plane = new THREE.Mesh(geometry, material);
+            
+            // Сохраняем URL текстуры если есть
+            if (textureUrl) {
+                plane.userData.textureUrl = textureUrl;
+                // Обновляем геометрию после загрузки текстуры
+                texture.image.onload = function() {
+                    const aspect = texture.image.width / texture.image.height;
+                    plane.geometry.dispose();
+                    plane.geometry = new THREE.PlaneGeometry(aspect, 1);
+                };
+            }
+            
+            // Позиционируем плоскость перед камерой
+            const direction = new THREE.Vector3();
+            camera.getWorldDirection(direction);
+            plane.position.copy(camera.position);
+            plane.position.add(direction.multiplyScalar(3));
+            
+            // Ориентируем плоскость к камере
+            plane.lookAt(camera.position);
+            
+            scene.add(plane);
+            planes.push(plane);
+            
+            return plane;
+        }
+
+        // Подсветка выбранной плоскости
+        function highlightPlane(plane) {
+            if (selectedPlane) {
+                // Убираем подсветку с предыдущей
+                if (selectedPlane.material.emissive) {
+                    selectedPlane.material.emissive.setHex(0x000000);
+                }
+            }
+            
+            selectedPlane = plane;
+            if (plane && plane.material) {
+                plane.material.emissive = new THREE.Color(0x444444);
+            }
+        }
+
+        // Raycasting для выбора
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+
+        function onMouseClick(event) {
+            mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(planes);
+
+            if (intersects.length > 0) {
+                highlightPlane(intersects[0].object);
+            } else {
+                highlightPlane(null);
+            }
+        }
+
+        // Управление камерой
+        const keys = {};
+        let isMouseDown = false;
+        let isRightMouseDown = false;
+        let lastMousePosition = { x: 0, y: 0 };
+        
+        window.addEventListener('keydown', (e) => {
+            const key = e.key.toLowerCase();
+            keys[key] = true;
+            
+            // Обработка Enter для загрузки текстуры
+            if (key === 'enter' && selectedPlane) {
+                e.preventDefault();
+                const url = prompt('Введите URL текстуры:');
+                if (url) {
+                    loadTextureToPlane(selectedPlane, url);
+                }
+            }
+            
+            // Обработка C для копирования плоскости
+            if (key === 'c' && selectedPlane) {
+                e.preventDefault();
+                copyPlane(selectedPlane);
+            }
+        });
+        window.addEventListener('keyup', (e) => {
+            keys[e.key.toLowerCase()] = false;
+        });
+        
+        // Управление камерой мышкой (правая кнопка)
+        renderer.domElement.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+        
+        renderer.domElement.addEventListener('mousedown', (e) => {
+            if (e.button === 2) { // Правая кнопка мыши
+                isRightMouseDown = true;
+                lastMousePosition.x = e.clientX;
+                lastMousePosition.y = e.clientY;
+            }
+        });
+        
+        renderer.domElement.addEventListener('mousemove', (e) => {
+            if (isRightMouseDown) {
+                const deltaX = e.clientX - lastMousePosition.x;
+                const deltaY = e.clientY - lastMousePosition.y;
+                
+                // Поворот камеры
+                camera.rotation.y -= deltaX * 0.005;
+                camera.rotation.x -= deltaY * 0.005;
+                
+                // Ограничиваем вертикальный поворот
+                camera.rotation.x = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, camera.rotation.x));
+                
+                // Запрещаем заваливание (roll) - фиксируем Z-ось
+                camera.rotation.z = 0;
+                
+                // Устанавливаем правильный порядок углов Эйлера для предотвращения заваливания
+                camera.rotation.order = 'YXZ';
+                
+                lastMousePosition.x = e.clientX;
+                lastMousePosition.y = e.clientY;
+            }
+        });
+        
+        renderer.domElement.addEventListener('mouseup', (e) => {
+            if (e.button === 2) {
+                isRightMouseDown = false;
+            }
+        });
+
+        function updateCamera() {
+            // Фиксируем roll ось и устанавливаем правильный порядок углов
+            camera.rotation.z = 0;
+            camera.rotation.order = 'YXZ';
+            
+            const direction = new THREE.Vector3();
+            camera.getWorldDirection(direction);
+            
+            // Используем глобальный up вектор для правильного вычисления right
+            const globalUp = new THREE.Vector3(0, 1, 0);
+            const right = new THREE.Vector3();
+            right.crossVectors(direction, globalUp).normalize();
+
+            if (keys['w']) {
+                camera.position.add(direction.multiplyScalar(cameraSpeed));
+            }
+            if (keys['s']) {
+                camera.position.add(direction.multiplyScalar(-cameraSpeed));
+            }
+            if (keys['a']) {
+                camera.position.add(right.multiplyScalar(-cameraSpeed));
+            }
+            if (keys['d']) {
+                camera.position.add(right.multiplyScalar(cameraSpeed));
+            }
+            if (keys['q']) {
+                camera.position.add(globalUp.multiplyScalar(-cameraSpeed));
+            }
+            if (keys['e']) {
+                camera.position.add(globalUp.multiplyScalar(cameraSpeed));
+            }
+        }
+
+        // Управление выбранной плоскостью
+        function updateSelectedPlane() {
+            if (!selectedPlane) return;
+
+            // Движение стрелками по мировым осям
+            const moveStep = 0.01; // Шаг движения (в 10 раз меньше)
+            const worldX = new THREE.Vector3(1, 0, 0); // Мировая ось X
+            const worldZ = new THREE.Vector3(0, 0, 1); // Мировая ось Z
+
+            if (keys['arrowleft']) {
+                // Стрелка влево - движение вдоль мировой оси X (отрицательное направление)
+                selectedPlane.position.add(worldX.clone().multiplyScalar(-moveStep));
+            }
+            if (keys['arrowright']) {
+                // Стрелка вправо - движение вдоль мировой оси X (положительное направление)
+                selectedPlane.position.add(worldX.clone().multiplyScalar(moveStep));
+            }
+            if (keys['arrowup']) {
+                // Стрелка вверх - движение вдоль мировой оси Z (положительное направление)
+                selectedPlane.position.add(worldZ.clone().multiplyScalar(moveStep));
+            }
+            if (keys['arrowdown']) {
+                // Стрелка вниз - движение вдоль мировой оси Z (отрицательное направление)
+                selectedPlane.position.add(worldZ.clone().multiplyScalar(-moveStep));
+            }
+
+            // Удаление
+            if (keys['delete']) {
+                scene.remove(selectedPlane);
+                const index = planes.indexOf(selectedPlane);
+                if (index > -1) {
+                    planes.splice(index, 1);
+                }
+                selectedPlane = null;
+                keys['delete'] = false;
+            }
+        }
+
+        // Копирование плоскости
+        function copyPlane(originalPlane) {
+            // Получаем параметры оригинальной плоскости
+            const originalPosition = originalPlane.position.clone();
+            const originalRotation = originalPlane.rotation.clone();
+            const originalScale = originalPlane.scale.clone();
+            const textureUrl = originalPlane.userData.textureUrl || null;
+            
+            // Копируем геометрию оригинальной плоскости
+            const originalGeometry = originalPlane.geometry;
+            const geometry = originalGeometry.clone();
+            
+            // Вычисляем направление для сдвига (вправо относительно камеры)
+            const direction = new THREE.Vector3();
+            camera.getWorldDirection(direction);
+            const right = new THREE.Vector3();
+            right.crossVectors(direction, camera.up).normalize();
+            
+            let material;
+            
+            if (textureUrl) {
+                // Загружаем текстуру для копии
+                const texture = new THREE.TextureLoader().load(textureUrl);
+                texture.alphaTest = 0.1;
+                material = new THREE.MeshStandardMaterial({
+                    map: texture,
+                    side: THREE.DoubleSide,
+                    transparent: true,
+                    alphaTest: 0.1
+                });
+            } else {
+                // Копируем цвет материала, если это одноцветный материал
+                const originalColor = originalPlane.material.color;
+                material = new THREE.MeshStandardMaterial({
+                    color: originalColor.clone(),
+                    side: THREE.DoubleSide
+                });
+            }
+            
+            const newPlane = new THREE.Mesh(geometry, material);
+            
+            // Копируем параметры
+            newPlane.position.copy(originalPosition);
+            newPlane.position.add(right.multiplyScalar(1.5)); // Сдвигаем вправо на 1.5 единицы
+            newPlane.rotation.copy(originalRotation);
+            newPlane.scale.copy(originalScale);
+            newPlane.userData.textureUrl = textureUrl;
+            
+            // Добавляем в сцену
+            scene.add(newPlane);
+            planes.push(newPlane);
+            
+            // Выбираем новую плоскость
+            highlightPlane(newPlane);
+        }
+
+        // Загрузка текстуры на плоскость
+        function loadTextureToPlane(plane, url) {
+            const loader = new THREE.TextureLoader();
+            // Сохраняем текущий масштаб
+            const currentScale = plane.scale.clone();
+            
+            loader.load(
+                url,
+                (texture) => {
+                    // Вычисляем соотношение сторон
+                    const aspect = texture.image.width / texture.image.height;
+                    
+                    // Обновляем геометрию
+                    plane.geometry.dispose();
+                    plane.geometry = new THREE.PlaneGeometry(aspect, 1);
+                    
+                    // Восстанавливаем масштаб
+                    plane.scale.copy(currentScale);
+                    
+                    // Обновляем материал
+                    const oldMaterial = plane.material;
+                    const isSelected = selectedPlane === plane;
+                    plane.material = new THREE.MeshStandardMaterial({
+                        map: texture,
+                        side: THREE.DoubleSide,
+                        transparent: true,
+                        alphaTest: 0.1,
+                        emissive: isSelected ? new THREE.Color(0x444444) : new THREE.Color(0x000000)
+                    });
+                    
+                    // Сохраняем URL текстуры
+                    plane.userData.textureUrl = url;
+                },
+                undefined,
+                (error) => {
+                    alert('Ошибка загрузки текстуры: ' + error);
+                }
+            );
+        }
+
+        // Вращение/перемещение выбранной плоскости мышкой (левая кнопка на выбранной плоскости)
+        let mouseDownOnPlane = false;
+        
+        renderer.domElement.addEventListener('mousedown', (e) => {
+            if (selectedPlane && e.button === 0 && !isRightMouseDown) {
+                // Проверяем, что клик был на выбранной плоскости
+                const mouse = new THREE.Vector2();
+                mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+                raycaster.setFromCamera(mouse, camera);
+                const intersects = raycaster.intersectObjects([selectedPlane]);
+                
+                if (intersects.length > 0) {
+                    // В режиме перемещения можно начинать drag без модификаторов
+                    // В режиме поворота нужны модификаторы
+                    if (editMode === 'translation') {
+                        // В режиме перемещения можно начинать drag всегда
+                        isTranslating = true;
+                        lastMouseX = e.clientX;
+                        lastMouseY = e.clientY;
+                        mouseDownOnPlane = true;
+                        isMouseDown = true;
+                    } else if (editMode === 'rotation' && (e.shiftKey || e.ctrlKey || e.altKey)) {
+                        // В режиме поворота нужны модификаторы
+                        isRotating = true;
+                        lastMouseX = e.clientX;
+                        lastMouseY = e.clientY;
+                        mouseDownOnPlane = true;
+                        isMouseDown = true;
+                    }
+                }
+            }
+        });
+
+        renderer.domElement.addEventListener('mousemove', (e) => {
+            if (selectedPlane && !isRightMouseDown) {
+                const deltaX = e.clientX - lastMouseX;
+                const deltaY = e.clientY - lastMouseY;
+                
+                if (isRotating && editMode === 'rotation') {
+                    // Режим вращения
+                    // Определяем ось вращения в зависимости от модификатора
+                    // Используем локальные оси плоскости
+                    if (e.shiftKey) {
+                        // Shift + drag = вращение вокруг локальной оси Y
+                        const localYAxis = new THREE.Vector3(0, 1, 0);
+                        selectedPlane.localToWorld(localYAxis);
+                        localYAxis.sub(selectedPlane.position).normalize();
+                        selectedPlane.rotateOnWorldAxis(localYAxis, deltaX * 0.01);
+                    } else if (e.ctrlKey) {
+                        // Ctrl + drag = вращение вокруг локальной оси X
+                        const localXAxis = new THREE.Vector3(1, 0, 0);
+                        selectedPlane.localToWorld(localXAxis);
+                        localXAxis.sub(selectedPlane.position).normalize();
+                        selectedPlane.rotateOnWorldAxis(localXAxis, deltaY * 0.01);
+                    } else if (e.altKey) {
+                        // Alt + drag = вращение вокруг локальной оси Z
+                        const localZAxis = new THREE.Vector3(0, 0, 1);
+                        selectedPlane.localToWorld(localZAxis);
+                        localZAxis.sub(selectedPlane.position).normalize();
+                        selectedPlane.rotateOnWorldAxis(localZAxis, deltaX * 0.01);
+                    }
+                } else if (isTranslating && editMode === 'translation') {
+                    const moveSpeed = 0.01;
+
+                    const worldX = new THREE.Vector3(1, 0, 0);
+                    const worldY = new THREE.Vector3(0, 1, 0);
+                    const worldZ = new THREE.Vector3(0, 0, 1);
+
+                    const signX = getScreenDirectionSign(worldX, camera);
+                    const signY = getScreenDirectionSign(worldY, camera);
+                    const signZ = getScreenDirectionSign(worldZ, camera);
+
+                    if (!e.shiftKey && !e.ctrlKey && !e.altKey) {
+                        // по умолчанию — X
+                        selectedPlane.position.add(
+                            worldX.clone().multiplyScalar(deltaX * moveSpeed * signX)
+                        );
+                    } else if (e.shiftKey) {
+                        // Shift — X
+                        selectedPlane.position.add(
+                            worldX.clone().multiplyScalar(deltaX * moveSpeed * signX)
+                        );
+                    } else if (e.ctrlKey) {
+                        // Ctrl — Y
+                        selectedPlane.position.add(
+                            worldY.clone().multiplyScalar(-deltaY * moveSpeed * signY)
+                        );
+                    } else if (e.altKey) {
+                        // Alt — Z
+                        selectedPlane.position.add(
+                            worldZ.clone().multiplyScalar(-deltaX * moveSpeed * signZ)
+                        );
+                    }
+                }
+                
+                lastMouseX = e.clientX;
+                lastMouseY = e.clientY;
+            }
+        });
+
+        renderer.domElement.addEventListener('mouseup', (e) => {
+            if (e.button === 0) {
+                isRotating = false;
+                isTranslating = false;
+                isMouseDown = false;
+                mouseDownOnPlane = false;
+            }
+        });
+        
+        // Отслеживание отпускания модификаторов для остановки операций
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'Shift' || e.key === 'Control' || e.key === 'Alt') {
+                if (isRotating) {
+                    isRotating = false;
+                }
+                if (isTranslating) {
+                    isTranslating = false;
+                }
+            }
+        });
+
+        // Масштабирование
+        renderer.domElement.addEventListener('wheel', (e) => {
+            if (selectedPlane && e.shiftKey) {
+                e.preventDefault();
+                const scaleFactor = e.deltaY > 0 ? 0.9 : 1.1;
+                selectedPlane.scale.multiplyScalar(scaleFactor);
+            }
+        });
+
+        // Кнопки
+        document.getElementById('addPlane').addEventListener('click', () => {
+            createPlane();
+        });
+
+        // Переключение режима редактирования
+        const modeToggleBtn = document.getElementById('modeToggle');
+        modeToggleBtn.addEventListener('click', () => {
+            if (editMode === 'rotation') {
+                editMode = 'translation';
+                modeToggleBtn.textContent = 'Режим: Перемещение';
+            } else {
+                editMode = 'rotation';
+                modeToggleBtn.textContent = 'Режим: Поворот';
+            }
+        });
+
+        document.getElementById('saveScene').addEventListener('click', () => {
+            saveScene();
+        });
+
+        document.getElementById('loadScene').addEventListener('click', () => {
+            document.getElementById('loadFile').click();
+        });
+
+        document.getElementById('loadFile').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    const data = JSON.parse(event.target.result);
+                    loadScene(data);
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function getScreenDirectionSign(worldAxis, camera)
+        {
+            const p0 = new THREE.Vector3(0, 0, 0).project(camera);
+            const p1 = worldAxis.clone().project(camera);
+
+            const dx = p1.x - p0.x;
+            const dy = p1.y - p0.y;
+
+            // выбираем доминирующую экранную ось
+            return Math.abs(dx) > Math.abs(dy)
+                ? Math.sign(dx || 1)
+                : Math.sign(dy || 1);
+        }
+
+
+        // Сохранение сцены
+        function saveScene() {
+            const sceneData = {
+                camera: {
+                    position: {
+                        x: camera.position.x,
+                        y: camera.position.y,
+                        z: camera.position.z
+                    },
+                    rotation: {
+                        x: camera.rotation.x,
+                        y: camera.rotation.y,
+                        z: camera.rotation.z
+                    }
+                },
+                planes: planes.map(plane => {
+                    const planeData = {
+                        position: {
+                            x: plane.position.x,
+                            y: plane.position.y,
+                            z: plane.position.z
+                        },
+                        rotation: {
+                            x: plane.rotation.x,
+                            y: plane.rotation.y,
+                            z: plane.rotation.z
+                        },
+                        scale: {
+                            x: plane.scale.x,
+                            y: plane.scale.y,
+                            z: plane.scale.z
+                        },
+                        textureUrl: plane.userData.textureUrl || null
+                    };
+                    return planeData;
+                })
+            };
+
+            const blob = new Blob([JSON.stringify(sceneData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'scene.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Загрузка сцены
+        function loadScene(data) {
+            // Очищаем текущую сцену
+            planes.forEach(plane => {
+                scene.remove(plane);
+                if (plane.geometry) plane.geometry.dispose();
+                if (plane.material.map) plane.material.map.dispose();
+                if (plane.material) plane.material.dispose();
+            });
+            planes = [];
+            selectedPlane = null;
+
+            // Восстанавливаем камеру
+            if (data.camera) {
+                camera.position.set(
+                    data.camera.position.x,
+                    data.camera.position.y,
+                    data.camera.position.z
+                );
+                camera.rotation.set(
+                    data.camera.rotation.x,
+                    data.camera.rotation.y,
+                    data.camera.rotation.z
+                );
+            }
+
+            // Восстанавливаем плоскости
+            if (data.planes) {
+                data.planes.forEach(planeData => {
+                    // Создаем плоскость без текстуры сначала
+                    const geometry = new THREE.PlaneGeometry(1, 1);
+                    const material = new THREE.MeshStandardMaterial({
+                        color: 0x4CAF50,
+                        side: THREE.DoubleSide
+                    });
+                    const plane = new THREE.Mesh(geometry, material);
+                    
+                    // Устанавливаем позицию, вращение и масштаб
+                    plane.position.set(
+                        planeData.position.x,
+                        planeData.position.y,
+                        planeData.position.z
+                    );
+                    plane.rotation.set(
+                        planeData.rotation.x,
+                        planeData.rotation.y,
+                        planeData.rotation.z
+                    );
+                    plane.scale.set(
+                        planeData.scale.x,
+                        planeData.scale.y,
+                        planeData.scale.z
+                    );
+                    
+                    // Сохраняем URL текстуры
+                    plane.userData.textureUrl = planeData.textureUrl || null;
+                    
+                    scene.add(plane);
+                    planes.push(plane);
+                    
+                    // Загружаем текстуру если есть
+                    if (planeData.textureUrl) {
+                        loadTextureToPlane(plane, planeData.textureUrl);
+                    }
+                });
+            }
+        }
+
+        // Клик для выбора (только если не было вращения и не была зажата правая кнопка)
+        renderer.domElement.addEventListener('click', (e) => {
+            if (!isRotating && !mouseDownOnPlane && e.button !== 2) {
+                onMouseClick(e);
+            }
+        });
+
+        // Обработка изменения размера окна
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        // Анимационный цикл
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            updateCamera();
+            updateSelectedPlane();
+            
+            renderer.render(scene, camera);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
