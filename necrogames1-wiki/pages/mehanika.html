@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" data-wiki-accent="indigo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Механика — NecroGames Wiki</title>
+  <link rel="stylesheet" href="../css/wiki.css">
+</head>
+<body>
+  <div class="wiki-shell">
+    <header class="wiki-masthead">
+      <h1 class="wiki-masthead__title"><a href="../index.html">NecroGames Wiki</a></h1>
+      <p class="wiki-masthead__tagline">Статическая вики в стиле классических fan-wiki.</p>
+    </header>
+
+    <main class="wiki-paper">
+      <div class="wiki-article-grid">
+        <div class="wiki-article-main">
+          <div id="wiki-body" class="wiki-body" aria-live="polite"></div>
+        </div>
+
+        <aside class="wiki-infobox" aria-label="Сводка по механике">
+          <div class="wiki-infobox__tabs" role="tablist">
+            <a class="wiki-infobox__tab" href="vvedenie.html" role="tab">Обзор</a>
+            <span class="wiki-infobox__tab wiki-infobox__tab--active" role="tab" aria-current="true">Техника</span>
+          </div>
+          <figure class="wiki-infobox__figure">
+            <img src="../media/portrait-placeholder.svg" width="200" height="257" alt="Схематичная иллюстрация">
+          </figure>
+          <h2 class="wiki-infobox__title">Механика вики</h2>
+
+          <h3 class="wiki-infobox__section-title">Технические данные</h3>
+          <table class="wiki-infobox__table">
+            <tbody>
+              <tr>
+                <th scope="row">Рендер</th>
+                <td>Клиентский (<code>marked</code>)<span class="wiki-infobox__ref">[1]</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Акцент</th>
+                <td><code>data-wiki-accent</code> на <code>&lt;html&gt;</code></td>
+              </tr>
+              <tr>
+                <th scope="row">Палитры</th>
+                <td>Только в <code>css/wiki.css</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="wiki-infobox__section-title">См. также</h3>
+          <table class="wiki-infobox__table">
+            <tbody>
+              <tr>
+                <th scope="row">Статьи</th>
+                <td>
+                  <ul>
+                    <li><a href="vvedenie.html">Введение</a></li>
+                    <li><a href="../index.html">Главная</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="wiki-footer">
+      <a href="../index.html">← На главную</a>
+      · [1] библиотека <code>marked</code> в <code>js/marked.min.js</code>.
+    </footer>
+  </div>
+
+  <script id="wiki-md" type="text/plain">
+# Механика
+
+Страница связана с [введением](vvedenie.html): там описана сборка файла и роль **инфобокса** в верхней HTML-части.
+
+> Внутренние ссылки — обычные URL на другие `.html`; после разбора Markdown браузер ведёт себя как с обычным сайтом.
+>
+> — к сведению читателя
+
+## Внутренние ссылки
+
+- `[текст](vvedenie.html)` — страница в той же папке `pages/`.
+- `[главная](../index.html)` — на уровень выше.
+
+## Код в статье
+
+```js
+document.getElementById("wiki-body");
+```
+
+## Цвет инфобокса
+
+Палитра задаётся **в CSS** (`css/wiki.css`): блоки `html[data-wiki-accent="violet"]`, `…indigo` и т.д. На этой странице в разметке стоит `<html lang="ru" data-wiki-accent="indigo">` — поэтому плашки и цитата в другом оттенке, чем у [введения](vvedenie.html).
+
+Удачного наполнения вики.
+  </script>
+
+  <script src="../js/marked.min.js"></script>
+  <script src="../js/wiki-render.js"></script>
+</body>
+</html>
