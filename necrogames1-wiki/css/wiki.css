@@ -191,34 +191,6 @@ body {
   line-height: 1.5;
 }
 
-.wiki-infobox__tabs {
-  display: flex;
-  border-bottom: 1px solid var(--wiki-border);
-  background: #f8f9fa;
-}
-
-.wiki-infobox__tab {
-  flex: 1;
-  text-align: center;
-  padding: 0.35rem 0.4rem;
-  font-size: 0.75rem;
-  color: var(--wiki-muted);
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-}
-
-.wiki-infobox__tab:hover {
-  color: var(--wiki-link);
-}
-
-.wiki-infobox__tab--active {
-  color: var(--wiki-link);
-  font-weight: 600;
-  border-bottom-color: var(--wiki-link);
-  background: var(--wiki-paper);
-}
-
 .wiki-infobox__figure {
   margin: 0;
   padding: 0.5rem;
@@ -453,4 +425,24 @@ body {
 
 .wiki-home-list a:visited {
   color: var(--wiki-link-visited);
+}
+
+.wiki-site-map {
+  margin-top: 0.5rem;
+}
+
+.wiki-site-map__group {
+  margin-top: 0.85rem;
+}
+
+.wiki-site-map__group:first-child {
+  margin-top: 0.35rem;
+}
+
+.wiki-site-map__heading {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--wiki-muted);
+  border: none;
 }

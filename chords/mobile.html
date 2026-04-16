@@ -256,7 +256,8 @@
 					const b = document.createElement('div')
 					b.className = 'button' + (row.raised ? ' small' : '')
 					b.textContent = row.raised ? r+'#' : r
-					b.onclick = () => playChord(i+1, row.raised, row.type)
+					b.onmousedown = () => playChord(i+1, row.raised, row.type)
+					b.onmouseup = () => stopNotes()
 					b.classList.add(styles[row.type])
 					buttonGrid.appendChild(b)
 				})
@@ -267,13 +268,7 @@
 		renderGrid()
 
 		// stop sound when touching outside controls
-		document.addEventListener('touchstart', e => {
-			if (!e.target.closest('button, .button, select, input')) {
-				stopNotes()
-			}
-		})
-
-		document.addEventListener('mousedown', e => {
+		document.addEventListener('touchstart mousedown', e => {
 			if (!e.target.closest('button, .button, select, input')) {
 				stopNotes()
 			}

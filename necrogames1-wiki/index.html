@@ -19,25 +19,35 @@
           <h2 style="margin: 0 0 0.5rem; font-size: 1.35rem; font-weight: 600; border: none;">Добро пожаловать</h2>
           <p style="margin: 0 0 0.85rem; color: var(--wiki-muted); font-size: 0.94rem;">
             Статьи оформлены в две колонки: слева текст (Markdown), справа — таблица фактов и изображение.
-            Откройте <a href="pages/vvedenie.html">введение</a> или <a href="pages/mehanika.html">механику</a> для примера (у «Механики» другой акцент в HTML).
+            Откройте <a href="pages/категория 2/vvedenie.html">введение</a> или <a href="pages/категория 1/mehanika.html">механику</a> для примера (у «Механики» другой акцент в HTML).
           </p>
 
           <!-- SITE-MAP-START -->
-          <ul class="wiki-home-list">
-            <li><a href="pages/vvedenie.html">Введение</a> — структура файла и инфобокс.</li>
-            <li><a href="pages/mehanika.html">Механика</a> — ссылки и смена палитры через CSS.</li>
-          </ul>
+          <div class="wiki-site-map">
+            <section class="wiki-site-map__group">
+              <h3 class="wiki-site-map__heading">wiki</h3>
+              <ul class="wiki-home-list">
+                <li><a href="pages/wiki/mehanika.html">Механика</a></li>
+                <li><a href="pages/wiki/vvedenie.html">Введение</a></li>
+              </ul>
+            </section>
+            <section class="wiki-site-map__group">
+              <h3 class="wiki-site-map__heading">основной сюжет</h3>
+              <ul class="wiki-home-list">
+                <li><a href="pages/основной сюжет/geroy.html">Герой</a></li>
+                <li><a href="pages/основной сюжет/glavnyj-boss.html">Главный босс</a></li>
+                <li><a href="pages/основной сюжет/nekromant.html">Некромант</a></li>
+                <li><a href="pages/основной сюжет/plot.html">Канва сюжета</a></li>
+                <li><a href="pages/основной сюжет/uchitel.html">Учитель</a></li>
+              </ul>
+            </section>
+          </div>
           <!-- SITE-MAP-END -->
-
         </div>
 
         <aside class="wiki-infobox" aria-label="О проекте">
-          <div class="wiki-infobox__tabs" role="tablist">
-            <span class="wiki-infobox__tab wiki-infobox__tab--active" role="tab" aria-current="true">Проект</span>
-            <a class="wiki-infobox__tab" href="pages/vvedenie.html" role="tab">Старт</a>
-          </div>
           <figure class="wiki-infobox__figure">
-            <img src="media/portrait-placeholder.svg" width="200" height="257" alt="Логотип-заглушка">
+            <img src="media/studio-logo.png" width="200" height="257" alt="Логотип-заглушка">
           </figure>
           <h2 class="wiki-infobox__title">NecroGames Wiki</h2>
 
@@ -45,16 +55,12 @@
           <table class="wiki-infobox__table">
             <tbody>
               <tr>
-                <th scope="row">Стек</th>
-                <td>HTML, CSS, JS</td>
+                <th scope="row">Дата основания</th>
+                <td>1875</td>
               </tr>
               <tr>
-                <th scope="row">Сервер</th>
-                <td>Не требуется</td>
-              </tr>
-              <tr>
-                <th scope="row">Медиа</th>
-                <td>Папка <code>media/</code></td>
+                <th scope="row">Направление</th>
+                <td>Разработка компьютерных игр</td>
               </tr>
             </tbody>
           </table>
