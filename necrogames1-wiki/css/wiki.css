@@ -434,7 +434,7 @@ body {
 }
 
 .wiki-site-map__group {
-  margin: 0;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
